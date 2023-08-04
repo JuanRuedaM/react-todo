@@ -1,0 +1,212 @@
+$base-color: #FCDAB7;
+$cards-color: #FFD2D7;
+
+/* antes 
+boton 4D4AE8 
+hover 3733E5
+active 3E3BBA*/
+
+$cards-color: #2897ff;
+$button-send: #0c64ac;
+$button-send-hover: #06375f;
+$button-send-active: #002f56;
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  gap: 20px;
+}
+
+.input-section {
+  background-color: $cards-color;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.send-input {
+  background-color: $button-send;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  border: 1px solid $button-send;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  padding: 10px;
+  margin: 5px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #adadad;
+  }
+}
+
+.send-button {
+  appearance: button;
+  background-color: $button-send;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  border: 1px solid $button-send;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: .4rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $button-send-hover;
+    border-color: $button-send-hover;
+  }
+
+  &:active {
+    background-color: $button-send-active;
+    background-image: none;
+    border-color: $button-send-active;
+    box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+  }
+
+  &:active:focus {
+    box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+  }
+
+}
+
+.title-app {
+  font-size: xx-large;
+  color: #fff;
+  text-align: center;
+}
+
+.list-section {
+  background-color: $cards-color;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.todo-card {
+  background: rgb(0, 198, 116);
+  background: linear-gradient(180deg, rgba(0, 198, 116, 1) 0%, rgba(0, 176, 237, 1) 100%);
+  color: #f0feff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: small;
+  width: 250px;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  h1 {
+    margin-right: 45px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    text-overflow: clip;
+    max-width: 200px;
+    overflow: hidden;
+  }
+}
+
+.delete-btn {
+  position: absolute;
+  right: 5px;
+  display: flex;
+  flex-grow: 1;
+
+  button {
+    all: unset;
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+
+.alert-text {
+  color: rgb(150, 0, 0);
+  margin: 0px;
+}
+
+@media (max-width: 700px) {
+
+  .container {
+    margin: 0px;
+    margin-top: 10px;
+  }
+
+  .title-app {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .input-section {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .list-section {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .todo-card {
+    // margin: 0px;
+    max-width: 100%;
+    min-height: 50px;
+    margin-bottom: 5px;
+    font-size: small;
+  }
+
+
+}
